@@ -131,21 +131,22 @@
     top:8%;
     position:relative;
 }
-#plate img {
+.plate-img {
     position:absolute;
     width:40%;
     top:0;
     left:50%;
     transform-origin:center;
-    transform:translate(-50%, 0);
+    transform:translate(-50%, 0) rotate(0deg);
+    transition:all 2s;
 }
-#planet {
+.plate-img:nth-child(1) {
     animation:ringRotation 15s infinite linear;
 }
-#sign{
+.plate-img:nth-child(2) {
     animation:ringRotation 20s infinite linear;
 }
-#house {
+.plate-img:nth-child(3) {
     animation:ringRotation 25s infinite linear;
 }
 .stop-animation {
@@ -159,9 +160,6 @@
 }
 .fast-house {
     animation-duration:2s!important;
-}
-.house-target {
-    transform:translate(-50%, 0) rotate(180deg)!important;
 }
 @keyframes ringRotation {
     0% {
