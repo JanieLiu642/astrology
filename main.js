@@ -36,9 +36,9 @@ $(function() {
                 opacity:0,
                 transform: "translate(-50%, 15px)"
             })
-            let duration = 3500
+            let duration = 4000
             if ($('#plate').hasClass('not-first-time')) {
-                duration = 2000
+                duration = 2500
                 $('.plate-img').css('transition', 'all 1.5s ease-out')
             } else {
                 $('#plate').addClass('not-first-time')
