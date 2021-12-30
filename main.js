@@ -32,7 +32,10 @@ $(function() {
             const n = shuffle()
             $('#answer label').text($('#question input').val().trim())
             $('#cards').empty().append(planet(n[0]) + sign(n[1]) + house(n[2]))
-            $('#dialogue').css({top: "8%", opacity: "0"})
+            $('#dialogue').css({
+                opacity:0,
+                transform: "translate(-50%, 20px)"
+            })
             $('#house').addClass('fast-house')
             $('#sign').addClass('fast-sign')
             $('#planet').addClass('fast-planet')
@@ -42,7 +45,11 @@ $(function() {
             setTimeout(() => {
                 $('#question').css('display','none')
                 $('#answer').css('display', 'flex')
-                $('#dialogue').css('opacity', '1')
+                $('#dialogue').css({
+                    opacity:1,
+                    top:"8%",
+                    transform: "translate(-50%, 0)"
+                })
                 $('#plate img').addClass('stop-animation')
                 $('#house').css('transform', houseRotate)
                 $('#sign').css('transform', signRotate)
