@@ -34,7 +34,7 @@ $(function() {
             $('#cards').empty().append(planet(n[0]) + sign(n[1]) + house(n[2]))
             $('#dialogue').css({
                 opacity:0,
-                transform: "translate(-50%, 20px)"
+                transform: "translate(-50%, 10px)"
             })
             $('#house').addClass('fast-house')
             $('#sign').addClass('fast-sign')
