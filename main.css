@@ -45,15 +45,20 @@
     outline:0;
     background-color:transparent;
     color:white;
-    font-size:30px;
-    font-family: 'Moon Dance', cursive;
+    font-size:26px;
     border:0;
     border-bottom:1px solid white;
     width:80%;
     text-align:center;
+    padding-bottom:5px;
 }
 #question input:focus {
     border-bottom:2px solid var(--water);
+}
+::placeholder{
+    font-size:26px;
+    color:white;
+    opacity:0.4;
 }
 #question label, #answer label {
     font-family: 'Bebas Neue', cursive;
