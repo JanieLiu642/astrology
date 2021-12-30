@@ -43,6 +43,7 @@ $(function() {
             const signRotate = `translate(-50%, 0) rotate(${(-n[1]-9)*30}deg)`
             const planetRotate = `translate(-50%, 0) rotate(${(-n[0]-8)*36}deg)`
             setTimeout(() => {
+                $('.plate-img:not(:last-child)').addClass('stop-animation')
                 $('#question').css('display','none')
                 $('#answer').css('display', 'flex')
                 $('#dialogue').css({
@@ -50,7 +51,6 @@ $(function() {
                     top:"8%",
                     transform: "translate(-50%, 0)"
                 })
-                $('#plate img').addClass('stop-animation')
                 $('#house').css('transform', houseRotate)
                 $('#sign').css('transform', signRotate)
                 $('#planet').css('transform', planetRotate)
@@ -62,7 +62,7 @@ $(function() {
         $('#house').removeClass('fast-house','house-target')
         $('#sign').removeClass('fast-sign')
         $('#planet').removeClass('fast-planet')
-        $('#plate img').removeClass('stop-animation')
+        $('.plate-img').removeClass('stop-animation')
         $('#dialogue').css('top','22%')
         $('#answer').css('display', 'none')
         $('#question input').val('')
