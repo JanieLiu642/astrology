@@ -51,15 +51,14 @@ $(function() {
                 $('#answer').css('display', 'flex')
                 $('#dialogue').css({
                     opacity:1,
-                    top:"8%",
                     transform: "translate(-50%, 0)"
-                })
+                }).addClass('dialogue-on-top')
             }, duration)
         }
     })
     $('#answer').on('submit', function(e) {
         e.preventDefault()
-        $('#dialogue').css('top','22%')
+        $('#dialogue').removeClass('dialogue-on-top')
         $('#answer').css('display', 'none')
         $('#question input').val('')
         $('#question').css('display','flex')
