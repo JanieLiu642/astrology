@@ -33,6 +33,9 @@
     transition:all 0.8s;
     z-index:5;
 }
+.dialogue-on-top {
+    top:8%!important;
+}
 #question, #answer {
     display:flex;
     flex-direction:column;
