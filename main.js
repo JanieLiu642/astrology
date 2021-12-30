@@ -9,14 +9,14 @@ $(function() {
         const name = planets[p].name.toLowerCase()
         const color = '--' + planets[p].element
         return `<div class="card" style="border-top:10px solid var(${color});">
-            <div class="card-header"><img src="images/${name}.svg" alt="${name}"><p style="color:var(${color});">${planets[p].name}</p>
+            <div class="card-header"><img src="${name}.svg" alt="${name}"><p style="color:var(${color});">${planets[p].name}</p>
             </div><p>${planets[p].desc}</p></div>`
     }
     const sign = (s) => {
         const name = signs[s].name.toLowerCase()
         const color = '--' + signs[s].element
         return `<div class="card" style="border-top:10px solid var(${color});">
-            <div class="card-header"><img src="images/${name}.svg" alt="${name}"><p style="color:var(${color});">${signs[s].name}</p>
+            <div class="card-header"><img src="${name}.svg" alt="${name}"><p style="color:var(${color});">${signs[s].name}</p>
             </div><p>${signs[s].desc}</p></div>`
     }
     const house = (h) => {
