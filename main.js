@@ -34,16 +34,19 @@ $(function() {
             $('#cards').empty().append(planet(n[0]) + sign(n[1]) + house(n[2]))
             $('#dialogue').css({
                 opacity:0,
-                transform: "translate(-50%, 10px)"
+                transform: "translate(-50%, 15px)"
             })
-            $('#house').addClass('fast-house')
-            $('#sign').addClass('fast-sign')
-            $('#planet').addClass('fast-planet')
-            const houseRotate = `translate(-50%, 0) rotate(${(-n[2]-9)*30}deg)`
-            const signRotate = `translate(-50%, 0) rotate(${(-n[1]-9)*30}deg)`
-            const planetRotate = `translate(-50%, 0) rotate(${(-n[0]-8)*36}deg)`
+            let duration = 3500
+            if ($('#plate').hasClass('not-first-time')) {
+                duration = 2000
+                $('.plate-img').css('transition', 'all 1.5s ease-out')
+            } else {
+                $('#plate').addClass('not-first-time')
+            }
+            $('#house').css('transform', `translate(-50%, 0) rotate(${(-n[2]-9) * 30}deg)`)
+            $('#sign').css('transform', `translate(-50%, 0) rotate(${(-n[1]-9) * 30}deg)`)
+            $('#planet').css('transform', `translate(-50%, 0) rotate(${(-n[0]-8) * 36}deg)`)
             setTimeout(() => {
-                $('.plate-img:not(:last-child)').addClass('stop-animation')
                 $('#question').css('display','none')
                 $('#answer').css('display', 'flex')
                 $('#dialogue').css({
@@ -51,18 +54,11 @@ $(function() {
                     top:"8%",
                     transform: "translate(-50%, 0)"
                 })
-                $('#house').css('transform', houseRotate)
-                $('#sign').css('transform', signRotate)
-                $('#planet').css('transform', planetRotate)
-            }, 3000)
+            }, duration)
         }
     })
     $('#answer').on('submit', function(e) {
         e.preventDefault()
-        $('#house').removeClass('fast-house','house-target')
-        $('#sign').removeClass('fast-sign')
-        $('#planet').removeClass('fast-planet')
-        $('.plate-img').removeClass('stop-animation')
         $('#dialogue').css('top','22%')
         $('#answer').css('display', 'none')
         $('#question input').val('')
