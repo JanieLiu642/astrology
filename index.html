@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JanieL Astrology</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Moon+Dance&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<div id="dialogue">
+    <form id="question">
+        <label for="input">What's on your mind?</label>
+        <input id="input" type="text" required maxlength="60">
+        <button type="submit">Start Wheel</button>
+    </form>
+    <form id="answer">
+        <label></label>
+        <div id="cards">
+        </div>
+        <button type="submit">Start Over</button>
+        <a>Developed by JanieL Astrology</a>
+    </form>
+</div>
+<div id="main">
+    <div id="plate">
+        <img id="house" src="images/outer_ring.svg" alt="outer-ring">
+        <img id="sign" src="images/middle_ring.svg" alt="middle_ring">
+        <img id="planet" src="images/inner_ring.svg" alt="inner_ring">
+        <img src="images/pointer.svg" alt="pointer">
+    </div>
+</div>
+</body>
+</html>
